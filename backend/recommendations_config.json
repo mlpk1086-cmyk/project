@@ -1,0 +1,1189 @@
+{
+  "conditions": {
+    "diabetes": {
+      "name": "Diabetes Risk",
+      "description": "Risk of developing type 2 diabetes based on blood sugar levels and BMI",
+      "requiredData": [
+        "age",
+        "bmi",
+        "fastingBloodSugar",
+        "physicalActivity",
+        "familyHistory",
+        "waistCircumference",
+        "bloodPressure"
+      ],
+      "dietRecommendations": {
+        "foodsToEat": [
+          "Leafy green vegetables (spinach, kale, broccoli)",
+          "Non-starchy vegetables (bell peppers, cucumbers, tomatoes)",
+          "Whole grains (brown rice, quinoa, oats, whole wheat bread)",
+          "Lean proteins (chicken, fish, turkey, tofu)",
+          "Healthy fats (avocado, olive oil, nuts, seeds)",
+          "Berries (blueberries, strawberries, raspberries)",
+          "Legumes (beans, lentils, chickpeas)",
+          "Greek yogurt (unsweetened)"
+        ],
+        "foodsToAvoid": [
+          "Sugary drinks (soda, fruit juices, energy drinks)",
+          "Refined carbohydrates (white bread, white rice, pastries)",
+          "Processed foods (chips, cookies, frozen meals)",
+          "Fried foods (french fries, fried chicken)",
+          "Trans fats (margarine, packaged snacks)",
+          "High-sodium foods (canned soups, deli meats)",
+          "Alcohol (especially on empty stomach)"
+        ],
+        "mealTips": [
+          "Eat regular, consistent meals to maintain stable blood sugar",
+          "Practice portion control - use smaller plates",
+          "Drink water before meals to reduce appetite",
+          "Include protein with every meal",
+          "Limit carbohydrate intake to 45-60 grams per meal",
+          "Choose low glycemic index foods",
+          "Avoid eating late at night",
+          "Keep a food diary to track intake"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "exercise": [
+          "Aim for 150 minutes of moderate aerobic activity per week",
+          "Include 2-3 strength training sessions per week",
+          "Walk for 10-15 minutes after each meal",
+          "Take the stairs instead of elevators",
+          "Park farther away and walk to your destination",
+          "Do household chores actively (vacuuming, gardening)"
+        ],
+        "sleep": [
+          "Get 7-9 hours of quality sleep nightly",
+          "Maintain consistent sleep and wake times",
+          "Avoid screens (phone, TV) 1 hour before bed",
+          "Keep bedroom cool, dark, and quiet",
+          "Limit caffeine after 2 PM"
+        ],
+        "stress": [
+          "Practice deep breathing exercises (4-7-8 technique)",
+          "Try meditation or mindfulness for 10-15 minutes daily",
+          "Engage in hobbies you enjoy",
+          "Connect with friends and family regularly",
+          "Consider yoga or tai chi for stress relief"
+        ],
+        "habits": [
+          "Quit smoking - seek support if needed",
+          "Limit alcohol consumption to 1 drink per day for women, 2 for men",
+          "Monitor blood sugar levels regularly as recommended",
+          "Take medications as prescribed",
+          "Attend regular check-ups with your healthcare provider"
+        ]
+      },
+      "recommendedActions": {
+        "immediate": [
+          "Schedule an appointment with your healthcare provider",
+          "Purchase a blood glucose monitor if recommended",
+          "Start a food diary to track eating habits",
+          "Begin with 10-minute daily walks"
+        ],
+        "shortTerm": [
+          "Complete fasting blood sugar test and HbA1c",
+          "Schedule eye examination for diabetic retinopathy screening",
+          "Get foot examination and podiatrist consultation",
+          "Review medications with doctor"
+        ],
+        "longTerm": [
+          "Enroll in diabetes prevention program (DPP)",
+          "Work with registered dietitian for meal planning",
+          "Consider continuous glucose monitoring (CGM)",
+          "Annual comprehensive diabetes screening"
+        ],
+        "tests": [
+          "Fasting Blood Sugar (FBS) - every 6 months",
+          "HbA1c - every 3-6 months",
+          "Blood Pressure - at every visit",
+          "Cholesterol Panel (Lipid Profile) - yearly",
+          "Kidney Function (Creatinine, eGFR) - yearly",
+          "Eye Exam (Retinal Screening) - yearly",
+          "Foot Exam - at every visit"
+        ]
+      },
+      "monitoringSchedule": {
+        "high": {
+          "bloodSugar": "Daily - before meals and bedtime",
+          "doctorVisit": "Every 1-3 months",
+          "HbA1c": "Every 3 months",
+          "bloodPressure": "Weekly at home, at every visit"
+        },
+        "moderate": {
+          "bloodSugar": "2-3 times per week",
+          "doctorVisit": "Every 3-6 months",
+          "HbA1c": "Every 6 months",
+          "bloodPressure": "Monthly at home"
+        },
+        "low": {
+          "bloodSugar": "Annual screening",
+          "doctorVisit": "Yearly check-up",
+          "HbA1c": "Every 2-3 years if normal",
+          "bloodPressure": "Annual screening"
+        }
+      },
+      "riskLevels": {
+        "low": {
+          "threshold": "score < 30",
+          "displayName": "Low Risk",
+          "color": "#4CAF50",
+          "recommendations": [
+            "Maintain a healthy lifestyle with regular physical activity",
+            "Continue monitoring blood sugar levels annually",
+            "Follow a balanced diet rich in fiber and whole grains",
+            "Maintain healthy body weight"
+          ]
+        },
+        "moderate": {
+          "threshold": "30 <= score < 60",
+          "displayName": "Moderate Risk",
+          "color": "#FF9800",
+          "recommendations": [
+            "Reduce sugar and refined carbohydrate intake",
+            "Increase physical activity to at least 150 minutes per week",
+            "Monitor blood sugar levels every 6 months",
+            "Consult with a healthcare provider for personalized advice",
+            "Consider lifestyle counseling programs",
+            "Maintain a food diary to track eating habits"
+          ]
+        },
+        "high": {
+          "threshold": "score >= 60",
+          "displayName": "High Risk",
+          "color": "#F44336",
+          "recommendations": [
+            "Consult with an endocrinologist immediately",
+            "Follow a strict low-carbohydrate diet under medical supervision",
+            "Begin regular blood glucose monitoring",
+            "Consider diabetes prevention program enrollment",
+            "Increase physical activity to 300 minutes per week",
+            "Discuss medication options with your healthcare provider",
+            "Schedule regular follow-up appointments"
+          ]
+        }
+      },
+      "scoring": {
+        "fastingBloodSugar": {
+          ">= 126": 40,
+          "100-125": 25,
+          "< 100": 0
+        },
+        "bmi": {
+          ">= 35": 25,
+          "30-34.9": 20,
+          "25-29.9": 10,
+          "< 25": 0
+        },
+        "age": {
+          "> 60": 15,
+          "45-60": 10,
+          "< 45": 0
+        },
+        "physicalActivity": {
+          "none": 15,
+          "occasional": 10,
+          "regular": 0
+        },
+        "familyHistory": {
+          "yes": 10,
+          "no": 0
+        }
+      }
+    },
+    "anemia": {
+      "name": "Anemia Risk",
+      "description": "Risk of anemia based on hemoglobin levels and demographic factors",
+      "requiredData": [
+        "hemoglobin",
+        "gender",
+        "age",
+        "diet",
+        "ironLevels",
+        "ferritin",
+        "vitaminB12",
+        "folate"
+      ],
+      "dietRecommendations": {
+        "foodsToEat": [
+          "Red meat (beef, lamb, venison)",
+          "Poultry (chicken, turkey)",
+          "Fish (salmon, tuna, sardines)",
+          "Shellfish (clams, oysters, mussels)",
+          "Eggs",
+          "Leafy greens (spinach, kale, Swiss chard)",
+          "Legumes (lentils, beans, chickpeas)",
+          "Iron-fortified cereals and breads",
+          "Pumpkin seeds, sunflower seeds",
+          "Dark chocolate (in moderation)",
+          "Citrus fruits (oranges, lemons) for vitamin C",
+          "Bell peppers, tomatoes"
+        ],
+        "foodsToAvoid": [
+          "Tea and coffee (tannins inhibit iron absorption)",
+          "Dairy products in large amounts (can block iron)",
+          "Raw shellfish (if vitamin B12 deficiency)",
+          "Highly processed foods",
+          "Excessive alcohol"
+        ],
+        "mealTips": [
+          "Eat iron-rich foods with vitamin C for better absorption",
+          "Cook in cast iron cookware to increase iron content",
+          "Avoid drinking tea/coffee with meals",
+          "Soak beans and legumes before cooking",
+          "Eat meat/fish with vegetables for better absorption",
+          "Consider taking iron supplements between meals",
+          "Space calcium supplements from iron-rich meals"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "exercise": [
+          "Maintain moderate exercise routine (150 min/week)",
+          "Include strength training 2x per week",
+          "Listen to your body - fatigue is a sign to rest",
+          "Avoid intense workouts if experiencing severe fatigue"
+        ],
+        "sleep": [
+          "Get 8-10 hours of sleep if severely fatigued",
+          "Maintain consistent sleep schedule",
+          "Take short naps if needed during the day",
+          "Rest after meals to aid digestion and absorption"
+        ],
+        "stress": [
+          "Manage stress through relaxation techniques",
+          "Prioritize rest and recovery",
+          "Consider counseling if chronic stress affects appetite"
+        ],
+        "habits": [
+          "Avoid smoking - can worsen oxygen delivery",
+          "Limit alcohol consumption",
+          "Eat regular meals - don't skip meals",
+          "Take iron supplements as prescribed (with vitamin C)"
+        ]
+      },
+      "recommendedActions": {
+        "immediate": [
+          "Schedule blood test for CBC (Complete Blood Count)",
+          "Check iron studies (ferritin, transferrin saturation)",
+          "Test vitamin B12 and folate levels",
+          "Consult with primary care physician"
+        ],
+        "shortTerm": [
+          "Consider iron supplementation (after confirming deficiency)",
+          "Schedule follow-up blood test in 4-6 weeks",
+          "Increase dietary iron intake immediately",
+          "Test for underlying causes (GI bleeding, heavy menstruation)"
+        ],
+        "longTerm": [
+          "Work with hematologist for chronic anemia management",
+          "Address underlying conditions (GI issues, nutritional deficiencies)",
+          "Regular monitoring every 3-6 months",
+          "Consider IV iron therapy if oral supplements not effective"
+        ],
+        "tests": [
+          "Complete Blood Count (CBC) - baseline and follow-up",
+          "Iron Studies (Ferritin, TIBC, Serum Iron) - every 3-6 months",
+          "Vitamin B12 - yearly if at risk",
+          "Folate Level - if deficient",
+          "Reticulocyte Count - to check bone marrow response",
+          "Bone Marrow Biopsy (if severe/unexplained) - as needed"
+        ]
+      },
+      "monitoringSchedule": {
+        "high": {
+          "bloodTests": "Every 2-4 weeks until stable",
+          "doctorVisit": "Monthly",
+          "ironSupplement": "Daily as prescribed"
+        },
+        "moderate": {
+          "bloodTests": "Every 3 months",
+          "doctorVisit": "Every 3-6 months",
+          "ironSupplement": "Daily as prescribed"
+        },
+        "low": {
+          "bloodTests": "Annual screening",
+          "doctorVisit": "Yearly check-up",
+          "ironSupplement": "As needed with dietary changes"
+        }
+      },
+      "riskLevels": {
+        "low": {
+          "threshold": "score < 30",
+          "displayName": "Low Risk",
+          "color": "#4CAF50",
+          "recommendations": [
+            "Maintain a balanced diet with iron-rich foods",
+            "Continue regular health check-ups",
+            "Include vitamin C in your diet for better iron absorption"
+          ]
+        },
+        "moderate": {
+          "threshold": "30 <= score < 60",
+          "displayName": "Moderate Risk",
+          "color": "#FF9800",
+          "recommendations": [
+            "Increase intake of iron-rich foods (leafy greens, beans, red meat)",
+            "Consider iron supplements after consulting a doctor",
+            "Ensure adequate vitamin C intake",
+            "Schedule follow-up blood tests in 3 months",
+            "Avoid tea and coffee with meals as they inhibit iron absorption"
+          ]
+        },
+        "high": {
+          "threshold": "score >= 60",
+          "displayName": "High Risk",
+          "color": "#F44336",
+          "recommendations": [
+            "Seek immediate medical evaluation",
+            "Prescribed iron supplements may be required",
+            "Consider vitamin B12 and folate supplements",
+            "Address underlying causes (GI issues, heavy menstrual bleeding)",
+            "Schedule urgent appointment with hematologist",
+            "Follow up with complete blood count tests"
+          ]
+        }
+      },
+      "scoring": {
+        "hemoglobin": {
+          "< 8": 50,
+          "8-10.9": 35,
+          "11-11.9": 20,
+          ">= 12": 0
+        },
+        "gender": {
+          "female": 10,
+          "male": 0
+        },
+        "age": {
+          "> 65": 15,
+          "> 50": 10,
+          "< 50": 0
+        },
+        "diet": {
+          "poor": 15,
+          "average": 5,
+          "good": 0
+        }
+      }
+    },
+    "vitamind": {
+      "name": "Vitamin D Risk",
+      "description": "Risk of vitamin D deficiency based on levels and location factors",
+      "requiredData": [
+        "vitaminD",
+        "location",
+        "sunExposure",
+        "skinType",
+        "age",
+        "bmi",
+        "calcium",
+        "alcoholConsumption",
+        "exerciseLevel",
+        "ironPercentRda",
+        "hemoglobin"
+      ],
+      "dietRecommendations": {
+        "foodsToEat": [
+          "Fatty fish (salmon, mackerel, sardines, tuna)",
+          "Cod liver oil",
+          "Egg yolks",
+          "Fortified dairy products (milk, yogurt, cheese)",
+          "Fortified plant-based milks (soy, almond, oat)",
+          "Fortified cereals",
+          "Mushrooms (especially UV-exposed)",
+          "Beef liver",
+          "Tofu (calcium-set)"
+        ],
+        "foodsToAvoid": [
+          "Highly processed foods low in nutrients",
+          "Excessive caffeine (can affect calcium absorption)",
+          "Soft drinks (displace nutrient-rich beverages)"
+        ],
+        "mealTips": [
+          "Include fatty fish 2-3 times per week",
+          "Eat egg yolks in moderation daily",
+          "Choose fortified foods when possible",
+          "Consume vitamin D with fat-containing meals for better absorption",
+          "Consider adding cod liver oil supplement"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "exercise": [
+          "Outdoor exercise exposes skin to sunlight naturally",
+          "Aim for 30 minutes of moderate exercise daily",
+          "Include weight-bearing exercises for bone health",
+          "Consider morning or afternoon outdoor walks"
+        ],
+        "sleep": [
+          "Maintain consistent sleep schedule",
+          "Get adequate sleep (7-9 hours) for overall health",
+          "Quality sleep supports hormone regulation including vitamin D metabolism"
+        ],
+        "stress": [
+          "Chronic stress can affect vitamin D absorption",
+          "Practice stress management techniques",
+          "Consider meditation or yoga"
+        ],
+        "habits": [
+          "Get safe sun exposure (10-30 minutes daily, depending on skin type)",
+          "Use sunscreen after initial sun exposure to prevent burning",
+          "Avoid excessive use of sunscreen - blocks vitamin D synthesis",
+          "Consider vitamin D supplementation in winter months",
+          "Spend time outdoors during midday when UV rays are strongest"
+        ]
+      },
+      "recommendedActions": {
+        "immediate": [
+          "Get vitamin D blood test (25-hydroxyvitamin D)",
+          "Consider starting vitamin D3 supplementation (1000-2000 IU daily)",
+          "Increase sun exposure safely (10-15 minutes midday)",
+          "Add vitamin D-rich foods to diet"
+        ],
+        "shortTerm": [
+          "Re-test vitamin D levels in 3-6 months",
+          "Consult with healthcare provider about supplementation dosage",
+          "Test calcium and PTH levels",
+          "Consider getting bone density scan if high risk"
+        ],
+        "longTerm": [
+          "Maintain year-round vitamin D supplementation",
+          "Regular monitoring of levels (every 6-12 months)",
+          "Consider genetic testing for vitamin D metabolism issues",
+          "Work with endocrinologist for chronic deficiency management"
+        ],
+        "tests": [
+          "Serum 25-Hydroxyvitamin D - baseline and follow-up every 3-6 months",
+          "Serum Calcium - every 3-6 months",
+          "Parathyroid Hormone (PTH) - if abnormal calcium",
+          "Bone Mineral Density (DEXA) - if severe deficiency or at risk for osteoporosis"
+        ]
+      },
+      "monitoringSchedule": {
+        "high": {
+          "vitaminD": "Monthly until stable",
+          "calcium": "Every 2-3 months",
+          "doctorVisit": "Every 1-3 months"
+        },
+        "moderate": {
+          "vitaminD": "Every 3-6 months",
+          "calcium": "Every 6 months",
+          "doctorVisit": "Every 3-6 months"
+        },
+        "low": {
+          "vitaminD": "Annual screening",
+          "calcium": "Annual if normal",
+          "doctorVisit": "Yearly check-up"
+        }
+      },
+      "riskLevels": {
+        "low": {
+          "threshold": "score < 30",
+          "displayName": "Low Risk",
+          "color": "#4CAF50",
+          "recommendations": [
+            "Maintain current vitamin D levels through balanced diet",
+            "Continue regular sun exposure (10-15 minutes daily)",
+            "Include vitamin D-rich foods in diet"
+          ]
+        },
+        "moderate": {
+          "threshold": "30 <= score < 60",
+          "displayName": "Moderate Risk",
+          "color": "#FF9800",
+          "recommendations": [
+            "Increase sun exposure safely (15-30 minutes daily)",
+            "Consume more fatty fish, fortified dairy, and eggs",
+            "Consider vitamin D supplements (1000-2000 IU daily)",
+            "Re-test vitamin D levels in 3-6 months",
+            "Discuss supplementation with your healthcare provider"
+          ]
+        },
+        "high": {
+          "threshold": "score >= 60",
+          "displayName": "High Risk",
+          "color": "#F44336",
+          "recommendations": [
+            "Start high-dose vitamin D supplementation immediately",
+            "Consult with a healthcare provider for proper dosage",
+            "Test for underlying conditions causing deficiency",
+            "Increase sun exposure to 30-60 minutes daily if possible",
+            "Consider calcium supplementation for bone health",
+            "Schedule follow-up tests to monitor progress"
+          ]
+        }
+      },
+      "scoring": {
+        "vitaminD": {
+          "< 10": 50,
+          "10-19": 35,
+          "20-29": 20,
+          ">= 30": 0
+        },
+        "location": {
+          "northern": 20,
+          "temperate": 10,
+          "tropical": 0
+        },
+        "sunExposure": {
+          "minimal": 20,
+          "limited": 10,
+          "adequate": 0
+        },
+        "alcoholConsumption": {
+          "heavy": 15,
+          "moderate": 5,
+          "none": 0
+        },
+        "exerciseLevel": {
+          "none": 10,
+          "occasional": 5,
+          "regular": 0
+        },
+        "ironPercentRda": {
+          "< 50": 15,
+          "50-75": 10,
+          "75-100": 5,
+          ">= 100": 0
+        },
+        "hemoglobin": {
+          "< 10": 20,
+          "10-12": 10,
+          "12-14": 5,
+          ">= 14": 0
+        }
+      }
+    },
+    "heart": {
+      "name": "Heart Risk",
+      "description": "Cardiovascular risk based on blood pressure, cholesterol, and lifestyle factors",
+      "requiredData": [
+        "systolicBP",
+        "diastolicBP",
+        "totalCholesterol",
+        "hdlCholesterol",
+        "ldlCholesterol",
+        "triglycerides",
+        "smokingStatus",
+        "bmi",
+        "physicalActivity",
+        "familyHistory",
+        "diabetes"
+      ],
+      "dietRecommendations": {
+        "foodsToEat": [
+          "Fruits (berries, apples, bananas, oranges)",
+          "Vegetables (leafy greens, broccoli, carrots)",
+          "Whole grains (oats, brown rice, quinoa)",
+          "Legumes (beans, lentils, chickpeas)",
+          "Lean proteins (fish, skinless poultry, tofu)",
+          "Fatty fish (salmon, mackerel, sardines - 2x/week)",
+          "Nuts and seeds (almonds, walnuts, flaxseeds)",
+          "Olive oil and avocado",
+          "Low-fat dairy"
+        ],
+        "foodsToAvoid": [
+          "Saturated fats (butter, fatty meats, full-fat dairy)",
+          "Trans fats (processed snacks, fried foods)",
+          "High-sodium foods (canned soups, deli meats, fast food)",
+          "Processed meats (bacon, sausage, hot dogs)",
+          "Refined carbohydrates (white bread, pastries)",
+          "Sugary drinks and beverages",
+          "Excessive alcohol"
+        ],
+        "mealTips": [
+          "Follow DASH or Mediterranean diet pattern",
+          "Use herbs and spices instead of salt for flavor",
+          "Read nutrition labels for sodium content",
+          "Limit sodium to <2300mg daily (1500mg if hypertensive)",
+          "Choose fresh or frozen vegetables over canned",
+          "Grill, bake, or steam instead of frying",
+          "Practice mindful eating - eat slowly, stop when full"
+        ]
+      },
+      "lifestyleRecommendations": {
+        "exercise": [
+          "Aerobic exercise: 150 minutes moderate or 75 minutes vigorous per week",
+          "Include muscle strengthening 2+ days per week",
+          "Start with 10-minute walks and gradually increase",
+          "Take activity breaks every hour when sitting",
+          "Use stairs, walk to destinations when possible",
+          "Consider cardiac rehabilitation program if recommended"
+        ],
+        "sleep": [
+          "Aim for 7-9 hours of sleep per night",
+          "Maintain consistent sleep schedule",
+          "Treat sleep apnea if suspected (snoring, daytime fatigue)",
+          "Avoid screens before bed",
+          "Keep bedroom cool and dark"
+        ],
+        "stress": [
+          "Practice stress management daily",
+          "Try meditation, deep breathing, or yoga",
+          "Maintain work-life balance",
+          "Stay connected with family and friends",
+          "Consider counseling for chronic stress",
+          "Avoid stress eating"
+        ],
+        "habits": [
+          "Quit smoking immediately - seek support programs",
+          "Limit alcohol to 1 drink/day (women), 2 drinks/day (men)",
+          "Maintain healthy BMI (18.5-24.9)",
+          "Monitor blood pressure at home regularly",
+          "Take medications as prescribed",
+          "Attend all medical appointments"
+        ]
+      },
+      "recommendedActions": {
+        "immediate": [
+          "Schedule appointment with primary care physician",
+          "Purchase home blood pressure monitor",
+          "Begin sodium reduction in diet",
+          "Start with 15-minute daily walks"
+        ],
+        "shortTerm": [
+          "Complete lipid panel (total, LDL, HDL, triglycerides)",
+          "Get ECG and cardiac evaluation",
+          "Discuss aspirin therapy with doctor",
+          "Consider meeting with dietitian",
+          "Start structured exercise program"
+        ],
+        "longTerm": [
+          "Annual cardiovascular health assessment",
+          "Work with cardiologist for ongoing management",
+          "Consider cardiac imaging if recommended (echocardiogram)",
+          "Maintain lifelong heart-healthy habits",
+          "Regular monitoring of cholesterol and blood pressure"
+        ],
+        "tests": [
+          "Blood Pressure - at every visit, weekly at home if high",
+          "Lipid Panel (Total, LDL, HDL, Triglycerides) - yearly",
+          "ECG/EKG - baseline and as needed",
+          "Blood Glucose/HbA1c - yearly",
+          "C-Reactive Protein (CRP) - if indicated",
+          "Coronary Calcium Score (if >40) - every 5 years",
+          "Exercise Stress Test - if symptomatic or high risk"
+        ]
+      },
+      "monitoringSchedule": {
+        "high": {
+          "bloodPressure": "Daily at home, every visit",
+          "lipidPanel": "Every 3-6 months",
+          "doctorVisit": "Every 1-3 months"
+        },
+        "moderate": {
+          "bloodPressure": "2-3 times per week at home",
+          "lipidPanel": "Every 6 months",
+          "doctorVisit": "Every 3-6 months"
+        },
+        "low": {
+          "bloodPressure": "Annual screening",
+          "lipidPanel": "Every 3-5 years if normal",
+          "doctorVisit": "Yearly check-up"
+        }
+      },
+      "riskLevels": {
+        "low": {
+          "threshold": "score < 30",
+          "displayName": "Low Risk",
+          "color": "#4CAF50",
+          "recommendations": [
+            "Maintain heart-healthy lifestyle",
+            "Continue regular physical activity",
+            "Follow a balanced diet low in saturated fats",
+            "Monitor blood pressure annually"
+          ]
+        },
+        "moderate": {
+          "threshold": "30 <= score < 60",
+          "displayName": "Moderate Risk",
+          "color": "#FF9800",
+          "recommendations": [
+            "Reduce sodium intake to less than 2300mg daily",
+            "Increase physical activity to 150 minutes per week",
+            "Follow DASH diet approach",
+            "Limit alcohol consumption",
+            "Monitor blood pressure regularly at home",
+            "Schedule annual cardiovascular check-up",
+            "Consider aspirin therapy after consulting doctor"
+          ]
+        },
+        "high": {
+          "threshold": "score >= 60",
+          "displayName": "High Risk",
+          "color": "#F44336",
+          "recommendations": [
+            "Consult cardiologist immediately",
+            "Follow strict DASH or Mediterranean diet",
+            "Begin structured exercise program under supervision",
+            "Quit smoking if currently smoking",
+            "Consider blood pressure medication",
+            "Monitor cholesterol levels with statin therapy if prescribed",
+            "Schedule regular follow-ups with healthcare provider",
+            "Reduce stress through meditation or counseling"
+          ]
+        }
+      },
+      "scoring": {
+        "systolicBP": {
+          ">= 180": 40,
+          "140-179": 30,
+          "130-139": 20,
+          "120-129": 10,
+          "< 120": 0
+        },
+        "diastolicBP": {
+          ">= 120": 40,
+          "90-119": 25,
+          "80-89": 15,
+          "< 80": 0
+        },
+        "totalCholesterol": {
+          ">= 240": 25,
+          "200-239": 15,
+          "< 200": 0
+        },
+        "hdlCholesterol": {
+          "< 40": 15,
+          "40-59": 5,
+          ">= 60": 0
+        },
+        "smokingStatus": {
+          "yes": 25,
+          "no": 0
+        },
+        "bmi": {
+          ">= 35": 15,
+          "30-34.9": 10,
+          "25-29.9": 5,
+          "< 25": 0
+        },
+        "physicalActivity": {
+          "none": 15,
+          "occasional": 10,
+          "regular": 0
+        }
+      }
+    }
+  },
+  "generalRecommendations": [
+    "Stay hydrated - drink at least 8 glasses of water daily",
+    "Get 7-9 hours of quality sleep each night",
+    "Maintain a healthy weight through diet and exercise",
+    "Manage stress through meditation, yoga, or hobbies",
+    "Schedule regular health check-ups",
+    "Stay up-to-date with vaccinations"
+  ],
+  "generalDietRecommendations": {
+    "foodsToEat": [
+      "Fruits and vegetables (5+ servings daily)",
+      "Whole grains (brown rice, oats, quinoa)",
+      "Lean proteins (fish, chicken, legumes)",
+      "Healthy fats (olive oil, nuts, avocados)",
+      "Low-fat dairy products"
+    ],
+    "foodsToAvoid": [
+      "Processed foods",
+      "Sugary drinks",
+      "Excessive sodium",
+      "Trans fats",
+      "Refined carbohydrates"
+    ]
+  },
+  "generalLifestyleRecommendations": {
+    "exercise": "150 minutes moderate exercise per week",
+    "sleep": "7-9 hours nightly",
+    "stress": "Regular stress management practice",
+    "habits": "Avoid smoking, limit alcohol"
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "description": "Enhanced health recommendations with diet, lifestyle, actions, and monitoring schedules"
+  },
+  "parameterRecommendations": {
+    "vitamind": {
+      "description": "Parameter-specific recommendations for Vitamin D based on individual values",
+      "parameters": {
+        "serumVitaminD": {
+          "< 10": {
+            "severity": "severe",
+            "recommendations": [
+              "⚠️ SEVERE Vitamin D Deficiency detected (< 10 ng/mL)",
+              "Consult a healthcare provider immediately for high-dose supplementation",
+              "Consider Vitamin D3 supplementation of 4000-10000 IU daily under medical supervision",
+              "Test calcium, phosphorus, and PTH levels to check for secondary hyperparathyroidism",
+              "Increase sun exposure to 30-60 minutes daily (midday, with exposed skin)",
+              "Include fatty fish (salmon, mackerel) in your diet 3 times per week"
+            ]
+          },
+          "10-19": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Vitamin D Insufficiency detected (10-20 ng/mL)",
+              "Consider Vitamin D3 supplementation (2000-4000 IU daily)",
+              "Increase sun exposure to 20-30 minutes daily",
+              "Add more Vitamin D-rich foods: fortified dairy, egg yolks, fatty fish",
+              "Re-test Vitamin D levels in 3 months to monitor progress"
+            ]
+          },
+          "20-29": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Vitamin D is in the insufficient range (20-30 ng/mL)",
+              "Consider Vitamin D3 supplementation (1000-2000 IU daily)",
+              "Aim for 15-20 minutes of daily sun exposure",
+              "Include Vitamin D-rich foods in your diet regularly"
+            ]
+          },
+          "30-100": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ Vitamin D levels are within normal range",
+              "Maintain current Vitamin D levels with balanced diet",
+              "Continue regular sun exposure (10-15 minutes daily)",
+              "Consider annual Vitamin D testing if at risk"
+            ]
+          }
+        },
+        "sunExposure": {
+          "< 0.25": {
+            "severity": "high",
+            "recommendations": [
+              "☀️ Very limited sun exposure detected",
+              "Consider Vitamin D supplementation especially in winter months",
+              "Try to get outdoor time during midday (10 AM - 3 PM)",
+              "Even 15-20 minutes of sunlight can help synthesize Vitamin D"
+            ]
+          },
+          "0.25-0.5": {
+            "severity": "moderate",
+            "recommendations": [
+              "☀️ Limited sun exposure - consider Vitamin D supplements",
+              "Try to increase outdoor time, especially in morning or midday"
+            ]
+          },
+          "> 1": {
+            "severity": "normal",
+            "recommendations": [
+              "☀️ Good sun exposure - helps maintain Vitamin D levels",
+              "Remember to use sunscreen after initial exposure to prevent burning"
+            ]
+          }
+        },
+        "bmi": {
+          ">= 30": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Obesity (BMI ≥ 30) can affect Vitamin D metabolism",
+              "Higher Vitamin D doses may be needed due to fat sequestration",
+              "Consult with healthcare provider about appropriate supplementation",
+              "Consider getting Vitamin D levels tested regularly"
+            ]
+          },
+          "25-29.9": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Overweight (BMI 25-29.9) may require slightly higher Vitamin D",
+              "Maintain healthy diet and exercise routine"
+            ]
+          }
+        },
+        "age": {
+          "> 65": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Age > 65: Skin's ability to produce Vitamin D decreases",
+              "Consider Vitamin D supplementation (1500-2000 IU daily)",
+              "Increase dietary intake of Vitamin D-rich foods",
+              "Regular testing recommended"
+            ]
+          },
+          "> 50": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Age > 50: Vitamin D production decreases with age",
+              "Consider annual Vitamin D testing"
+            ]
+          }
+        },
+        "alcoholConsumption": {
+          "heavy": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Heavy alcohol consumption affects Vitamin D metabolism",
+              "Consider higher Vitamin D supplementation under medical guidance",
+              "Limit alcohol intake for better nutrient absorption",
+              "Get liver function tests if consuming alcohol regularly"
+            ]
+          },
+          "moderate": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Moderate alcohol consumption may affect Vitamin D",
+              "Consider monitoring Vitamin D levels"
+            ]
+          }
+        },
+        "exerciseLevel": {
+          "none": {
+            "severity": "moderate",
+            "recommendations": [
+              "🏃 No regular exercise detected",
+              "Consider outdoor exercise to boost Vitamin D from sunlight",
+              "Start with 15-30 minute walks daily"
+            ]
+          }
+        },
+        "ironPercentRda": {
+          "< 50": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Very low iron intake (< 50% RDA) can affect Vitamin D metabolism",
+              "Iron deficiency may impair Vitamin D activation",
+              "Consider iron supplementation after testing ferritin levels",
+              "Eat iron-rich foods: red meat, beans, leafy greens"
+            ]
+          },
+          "50-75": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Low iron intake may affect Vitamin D metabolism",
+              "Consider iron-rich foods or supplementation"
+            ]
+          }
+        },
+        "hemoglobin": {
+          "< 10": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Low hemoglobin (< 10 g/dL) may indicate anemia affecting overall health",
+              "Anemia can worsen fatigue and weakness",
+              "Consult healthcare provider for anemia testing"
+            ]
+          },
+          "10-12": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Mildly low hemoglobin - consider iron-rich foods",
+              "Get complete blood count (CBC) if persistent fatigue"
+            ]
+          }
+        }
+      }
+    },
+    "diabetes": {
+      "description": "Parameter-specific recommendations for Diabetes based on individual values",
+      "parameters": {
+        "fastingBloodSugar": {
+          ">= 126": {
+            "severity": "severe",
+            "recommendations": [
+              "⚠️ CRITICAL: Fasting blood sugar ≥ 126 mg/dL indicates diabetes",
+              "Consult an endocrinologist immediately",
+              "Start blood glucose monitoring immediately",
+              "Begin low-carbohydrate diet under medical supervision",
+              "Consider diabetes medication if prescribed"
+            ]
+          },
+          "100-125": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Prediabetes detected (Fasting blood sugar 100-125 mg/dL)",
+              "Act now to prevent progression to diabetes",
+              "Reduce sugar and refined carbohydrate intake",
+              "Increase physical activity to 150+ minutes per week",
+              "Lose 5-10% body weight if overweight",
+              "Schedule fasting blood sugar and HbA1c tests"
+            ]
+          },
+          "70-99": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ Fasting blood sugar is in normal range (70-99 mg/dL)",
+              "Maintain healthy lifestyle to keep levels stable",
+              "Continue regular exercise and balanced diet"
+            ]
+          }
+        },
+        "hbA1cLevel": {
+          ">= 6.5": {
+            "severity": "severe",
+            "recommendations": [
+              "⚠️ HbA1c ≥ 6.5% indicates diabetes diagnosis",
+              "Consult healthcare provider immediately",
+              "Begin regular diabetes management",
+              "Monitor blood sugar levels multiple times daily"
+            ]
+          },
+          "5.7-6.4": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Prediabetes HbA1c range (5.7-6.4%)",
+              "Implement lifestyle modifications immediately",
+              "Increase physical activity",
+              "Follow low-glycemic index diet",
+              "Schedule follow-up HbA1c test in 6 months"
+            ]
+          },
+          "< 5.7": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ HbA1c is in normal range (< 5.7%)",
+              "Maintain healthy lifestyle habits",
+              "Continue annual screening"
+            ]
+          }
+        },
+        "bmi": {
+          ">= 35": {
+            "severity": "severe",
+            "recommendations": [
+              "⚠️ Obesity Class II/III (BMI ≥ 35) significantly increases diabetes risk",
+              "Weight loss of 10-15% can dramatically reduce diabetes risk",
+              "Consult with dietitian for personalized meal plan",
+              "Consider bariatric consultation if other methods fail",
+              "Increase physical activity to 300 minutes per week"
+            ]
+          },
+          "30-34.9": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Obesity Class I (BMI 30-34.9) increases diabetes risk",
+              "Aim for 7-10% weight loss",
+              "Follow low-calorie, low-carbohydrate diet",
+              "Increase physical activity to 150+ minutes per week"
+            ]
+          },
+          "25-29.9": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Overweight (BMI 25-29.9) - consider lifestyle modifications",
+              "Maintain calorie deficit through diet and exercise",
+              "Focus on whole foods and portion control"
+            ]
+          },
+          "18.5-24.9": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ BMI is in healthy range - maintain current weight",
+              "Continue regular physical activity",
+              "Follow balanced diet"
+            ]
+          }
+        },
+        "physicalActivity": {
+          "sedentary": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Sedentary lifestyle is a major diabetes risk factor",
+              "Start with 10-minute walks after each meal",
+              "Aim for 150 minutes of moderate exercise per week",
+              "Use standing desk if possible",
+              "Take activity breaks every hour"
+            ]
+          },
+          "occasional": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Occasional physical activity - increase consistency",
+              "Try to exercise at least 3-4 times per week",
+              "Add strength training 2 times per week"
+            ]
+          },
+          "moderate": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ Good physical activity level",
+              "Maintain 150 minutes of weekly exercise"
+            ]
+          },
+          "active": {
+            "severity": "normal",
+            "recommendations": [
+              "✅ Excellent physical activity - continue maintaining"
+            ]
+          }
+        },
+        "age": {
+          "> 60": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Age > 60 increases diabetes risk",
+              "Regular diabetes screening recommended",
+              "Maintain healthy weight and active lifestyle"
+            ]
+          },
+          "45-60": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Age 45-60 - start regular diabetes screening if not done",
+              "Screen at least every 3 years"
+            ]
+          }
+        },
+        "smokingStatus": {
+          "yes": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Smoking increases diabetes risk and complications",
+              "Quit smoking to reduce diabetes risk significantly",
+              "Seek smoking cessation programs or nicotine replacement therapy",
+              "Consult healthcare provider for support"
+            ]
+          }
+        },
+        "systolicBP": {
+          ">= 140": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ High blood pressure (≥ 140 mmHg) - common with diabetes",
+              "Monitor blood pressure regularly",
+              "Reduce sodium intake to < 1500 mg/day",
+              "Consult healthcare provider about blood pressure management"
+            ]
+          },
+          "130-139": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Elevated blood pressure - monitor regularly",
+              "Reduce sodium intake",
+              "Increase physical activity"
+            ]
+          }
+        },
+        "totalCholesterol": {
+          ">= 240": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ High cholesterol (≥ 240 mg/dL) increases cardiovascular risk",
+              "Discuss cholesterol management with healthcare provider",
+              "Follow heart-healthy diet low in saturated fats",
+              "Consider lipid panel test"
+            ]
+          },
+          "200-239": {
+            "severity": "moderate",
+            "recommendations": [
+              "📊 Borderline cholesterol - monitor and modify diet",
+              "Reduce saturated fat intake",
+              "Increase fiber intake"
+            ]
+          }
+        },
+        "hdlCholesterol": {
+          "< 40": {
+            "severity": "high",
+            "recommendations": [
+              "⚠️ Low HDL cholesterol (< 40 mg/dL) increases diabetes risk",
+              "Increase aerobic exercise",
+              "Consume healthy fats (olive oil, nuts, avocados)",
+              "Avoid trans fats",
+              "Consider omega-3 supplementation"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+

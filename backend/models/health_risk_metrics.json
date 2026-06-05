@@ -1,0 +1,66 @@
+{
+  "diabetes_risk_random_forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "diabetes_risk_gradient_boosting": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "anemia_risk_random_forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 0.998,
+    "cv_std": 0.0040000000000000036
+  },
+  "anemia_risk_gradient_boosting": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "heart_risk_random_forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "heart_risk_gradient_boosting": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "vitamind_risk_random_forest": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "vitamind_risk_gradient_boosting": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  }
+}
